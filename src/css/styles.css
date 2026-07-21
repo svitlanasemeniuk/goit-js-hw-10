@@ -16,3 +16,149 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+body {
+  font-family: "Montserrat", sans-serif;
+} 
+
+.timer {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.label {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#datetime-picker {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  outline: none;
+  margin-right: 8px;
+}
+
+#datetime-picker:hover,
+#datetime-picker:focus {
+  border-color: #4E75FF;
+}
+
+#datetime-picker:disabled {
+  background-color: #f5f5f5;
+  color: #a3a3a3;
+}
+
+button[data-start] {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4E75FF;
+  color: #FFF;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[data-start]:hover:not(:disabled) {
+  background: #3A5BCC;
+}
+
+button[data-start]:disabled {
+  background: #cfd4df;
+  color: #98a2b3;
+  cursor: not-allowed;
+}
+
+
+/* Базові стилі для форми */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 360px;
+  font-family: sans-serif;
+  margin: 24px;
+}
+
+/* Стилі для поля вводу (delay) */
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  color: #2e2f42;
+}
+
+.form input[type="number"] {
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 250ms ease-in-out;
+}
+
+.form input[type="number"]:focus,
+.form input[type="number"]:hover {
+  border-color: #4d5ae5;
+}
+
+/* Стилі для групи радіокнопок (State) */
+.form fieldset {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 0;
+}
+
+.form legend {
+  font-size: 16px;
+  color: #2e2f42;
+  padding: 0 4px;
+}
+
+.form fieldset label {
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+
+.form button {
+  padding: 8px 16px;
+  background-color: #4d5ae5;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.form button:hover,
+.form button:focus {
+  background-color: #404bbf;
+}
